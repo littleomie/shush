@@ -26405,8 +26405,11 @@ const main = async () => {
 
                 conn.exec(command, (err, stream) => {
                     if (err) {
-                        throw err;
+                        core.setFailed(err.message);
+                        return;
                     }
+
+                    console.log('Successfully connected');
 
                     stream.on('close', (code) => {
                         output += `\nCommand '${command}' exited with code ${code}\n`;
