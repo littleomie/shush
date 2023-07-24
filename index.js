@@ -32,11 +32,11 @@ const main = async () => {
         const conn = new Client();
 
         conn.on('ready', () => {
+            console.log('Successfully connected');
+
             let output = '';
 
             function executeNextCommand(commands) {
-                console.log('Successfully connected');
-
                 if (commands.length === 0) {
                     conn.end();
                     core.setOutput('output', output);
