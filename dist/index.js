@@ -26418,6 +26418,8 @@ const main = async () => {
                     });
                 });
             }
+
+            executeNextCommand(commands.split('\n'));
         }).on('error', (err) => {
             core.setFailed(err.message);
         }).connect(credentials);
