@@ -26173,14 +26173,6 @@ module.exports = eval("require")("./crypto/build/Release/sshcrypto.node");
 
 /***/ }),
 
-/***/ 4194:
-/***/ ((module) => {
-
-module.exports = eval("require")("@actions/github");
-
-
-/***/ }),
-
 /***/ 4633:
 /***/ ((module) => {
 
@@ -26367,7 +26359,6 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const core = __nccwpck_require__(6616);
-const github = __nccwpck_require__(4194);
 const { Client } = __nccwpck_require__(5501);
 
 const main = async () => {
