@@ -1,0 +1,28 @@
+name: 'Shush'
+description: 'Runs commands on remote server'
+inputs:
+  host:
+    description: 'Host to connect to'
+    required: true
+  user:
+    description: 'Username to connect with'
+    required: true
+  password:
+    description: 'Password to connect with'
+    required: false
+  port:
+    description: 'Port to connect to'
+    required: false
+    default: 22
+  key:
+    description: 'SSH key to connect with'
+    required: false
+  passphrase:
+    description: 'Passphrase for SSH key'
+    required: false
+  commands:
+    description: 'Commands to run'
+    required: true
+runs:
+  using: 'node18'
+  main: 'dist/index.js'
