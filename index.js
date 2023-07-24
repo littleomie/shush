@@ -59,7 +59,7 @@ const main = async () => {
                 });
             }
         }).on('error', (err) => {
-            throw err;
+            core.setFailed(err.message);
         }).connect(credentials);
     } catch (error) {
         core.setFailed(error.message);
