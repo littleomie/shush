@@ -26369,7 +26369,7 @@ const main = async () => {
         const port = core.getInput('port', { required: false });
         const key = core.getInput('key', { required: false });
         const passphrase = core.getInput('passphrase', { required: false });
-        const commands = core.getInput('command', { required: true });
+        const commands = core.getInput('commands', { required: true });
 
         const credentials = {
             host: host,
