@@ -26395,6 +26395,8 @@ const main = async () => {
             let output = '';
 
             function executeNextCommand(commands) {
+                console.log('Successfully connected');
+
                 if (commands.length === 0) {
                     conn.end();
                     core.setOutput('output', output);
@@ -26408,8 +26410,6 @@ const main = async () => {
                         core.setFailed(err.message);
                         return;
                     }
-
-                    console.log('Successfully connected');
 
                     stream.on('close', (code) => {
                         output += `\nCommand '${command}' exited with code ${code}\n`;
