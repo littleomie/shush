@@ -1,4 +1,4 @@
-name: 'Shush'
+name: 'GitHub Actions Shush'
 description: 'Runs commands on remote server'
 inputs:
   host:

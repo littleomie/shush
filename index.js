@@ -52,19 +52,17 @@ const main = async () => {
                     }
 
                     stream.on('close', (code) => {
-                        output += `\nCommand '${command}' exited with code ${code}\n`;
+                        console.log(`\nCommand '${command}' exited with code ${code}\n`);
                         executeNextCommand(commands);
                     }).on('data', (data) => {
-                        output += data.toString();
+                        console.log(data.toString());
                     }).stderr.on('data', (data) => {
-                        output += data.toString();
+                        console.log(data.toString());
                     });
                 });
             }
 
             executeNextCommand(commands.split('\n'));
-
-            console.log(output);
         }).on('error', (err) => {
             core.setFailed(err.message);
         }).connect(credentials);
