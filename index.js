@@ -63,6 +63,8 @@ const main = async () => {
             }
 
             executeNextCommand(commands.split('\n'));
+
+            console.log(output);
         }).on('error', (err) => {
             core.setFailed(err.message);
         }).connect(credentials);
